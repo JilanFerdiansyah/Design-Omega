@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
+*{
+   cursor: none;
+}
+
+.mono{
+    font-family: Viaoda Libre;
+}
+.cursor{
+     position: fixed;
+     width: 30px;
+     height: 30px;
+     border-radius: 50%;
+     background: white ;
+     transform: translate(-50%,- 50%);
+     pointer-events: none ;
+     transition: 0.1s;
+     mix-blend-mode: ;
+}
+
+ul li:hover ~ .cursor{
+    transform: scale(5);
+}
+
+.arrow:hover{
+    transform: scale(2);
+}
+
+.transition{
+    transition: 0.3s;
+}
+
+.hobo{
+    transition: 0.5s;
+    height: 80vh;
+}
+.hobo:hover{
+    border: 20px solid white;
+    transition: 0.5s;
+}
+
+.putar{
+    animation-name: spin;
+  animation-duration: 10000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+.putar-reversed{
+    animation-name: spin-revesed;
+  animation-duration: 10000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+/* .scroll{
+    display: flex;
+}
+.scroll div{
+    animation: animate 40s linear infinite ;
+    white-space: nowrap;
+}
+
+.scroll div:nth-child(2){
+    animation: animate2 40s linear infinite ; 
+    animation-delay: -20s;
+}
+
+
+@keyframes animate {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%;);
+    }
+    
+}
+
+@keyframes animate2 {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-200%);
+    }
+    
+} */
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes spin-revesed  {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(-360deg);
+    }
+}
+
